@@ -5,7 +5,7 @@ import Heading from "./Heading";
 import Button from "./Button";
 
 interface EmptyState{
-    title: string,
+    title?: string,
     subtitle?: string,
     showReset?: boolean,
 }
