@@ -1,6 +1,7 @@
 "use client";
 
 import Container from "@/app/components/Container";
+import ListingHead from "@/app/components/listings/ListingHead";
 import { categories } from "@/app/components/navbar/Categories";
 import { SafeListing, SafeUser } from "@/app/types";
 import { Reservation } from "@prisma/client";
@@ -31,8 +32,8 @@ const ListingClient:React.FC<ListingClientProps> = ({
                 <div className="flex flex-col gap-6">
                     <ListingHead
                     title={listing.title}
-                    imageSrc={imageSrc}
-                    locationValue={locationValue}
+                    imageSrc={listing.imageSrc}
+                    locationValue={listing.locationValue}
                     id={listing.id}
                     currentUser={currentUser}
                     />
