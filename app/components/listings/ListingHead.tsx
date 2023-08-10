@@ -4,6 +4,7 @@ import useCountries from "@/app/hooks/useConuntries";
 import { SafeUser } from "@/app/types";
 import Heading from "../Heading";
 import Image from 'next/image';
+import HearButton from '../HearButton';
 
 interface ListingHeadProps {
     title: string;
@@ -36,6 +37,12 @@ const ListingHead: React.FC<ListingHeadProps> = ({
             fill
             className="object-cover w-full"
             />
+            <div className="absolute top-5 right-5">
+                <HearButton 
+                listingId={id}
+                currentUser={currentUser}
+                />
+            </div>
         </div>
         </>
      );
